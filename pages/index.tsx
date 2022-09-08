@@ -13,7 +13,9 @@ const Home: NextPage = () => {
     <Layout title={""} description={""} keywords={""}>
       <Button primary>SEE PRODUCT</Button>
       <Button outlined>SEE PRODUCT</Button>
-      <Input name="name" type={"text"} />
+      <Button secondary>SEE PRODUCT</Button>
+      <Input name="Name" type="text" />
+      <Input type="radio" value="e-Money" />
     </Layout>
   );
 };
