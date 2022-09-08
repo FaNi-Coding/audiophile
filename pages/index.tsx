@@ -13,7 +13,7 @@ const Home: NextPage = () => {
     <Layout title={""} description={""} keywords={""}>
       <Button primary>SEE PRODUCT</Button>
       <Button outlined>SEE PRODUCT</Button>
-      <Button secondary>SEE PRODUCT</Button>
+      <Button secondary>SHOP</Button>
       <Input name="Name" type="text" />
       <Input type="radio" value="e-Money" />
     </Layout>
