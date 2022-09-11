@@ -5,11 +5,13 @@ export const StyledTextInput = styled.label`
   font-weight: 500;
   font-size: 12px;
   position: relative;
+  color: ${({ theme }) => theme.colors.error};
 
   .error-message {
     position: absolute;
     right: 0;
     top: 1px;
+    color: ${({ theme }) => theme.colors.error};
   }
 
   .text-input {

@@ -3,7 +3,6 @@ import React from "react";
 import { StyledTextInput, StyledRadioInput } from "./InputStyles";
 //props
 import { Props } from "../../../interfaces/InputInterfaces";
-import { miniSerializeError } from "@reduxjs/toolkit";
 
 export default function Input({ name, type, value }: Props) {
   return (
@@ -14,6 +13,8 @@ export default function Input({ name, type, value }: Props) {
             {name}
             <span className="error-message">Wrong format</span>
             <input
+              required
+              aria-invalid="true"
               className="text-input"
               type={type}
               id={name}

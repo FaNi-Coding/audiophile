@@ -1,23 +1,34 @@
 import { createGlobalStyle } from "styled-components";
 
 export const theme = {
-  body: "#FAFAFA",
-  boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.1)",
+  breakpoints: {
+    mobileS: "320px",
+    mobileM: "375px",
+    mobileL: "425px",
+    tablet: "768px",
+    laptop: "1024px",
+    laptopL: "1440px",
+    desktop: "2560px",
+  },
 
   colors: {
     header: "#0E0E0E",
     body: "#FAFAFA",
     footer: "#101010",
 
-    primary: "#ffffff",
-    secondary: "#00000080",
-    outlined: "#000000",
-  },
-
-  button: {
     primary: "#D87D4A",
     secondary: "#ffffff",
-    outlined: "#ffffff",
+    tertiary: "#F1F1F1",
+    outlined: "transparent",
+    primaryHovered: "#FBAF85",
+    outlinedHovered: "#000000",
+
+    error: "#CD2C2C",
+
+    black: "#000000",
+    white: "#ffffff",
+
+    boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.1)",
   },
 
   fonts: {
@@ -29,9 +40,19 @@ export const theme = {
 export const GlobalStyles = createGlobalStyle`
 
 body {
-  background-color: ${({ theme }: any) => theme.body};
+  background-color: ${({ theme }: any) => theme.colors.body};
   font-size: 15px;
   line-height: 25px;
+}
+
+header {
+  background-color: ${({ theme }: any) => theme.colors.header};
+  color: ${({ theme }: any) => theme.colors.white};
+}
+
+footer {
+  background-color: ${({ theme }: any) => theme.colors.footer};
+  color: ${({ theme }: any) => theme.colors.white};
 }
 
 section {
@@ -89,9 +110,14 @@ h6 {
 }
 
 .subTitle {
+  margin-top: 32px;
   font-size: 13px;
   line-height: 25px;
   letter-spacing: 1px;
   text-transform: capitalize;
+}
+
+.copyright {
+  font-size: 15px;
 }
 `;

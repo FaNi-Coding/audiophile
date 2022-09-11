@@ -5,12 +5,12 @@ const icon = `url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 
 
 export const DefaultButton = styled.button<ButtonProps>`
   position: relative;
-  background: ${({ primary, outlined, secondary, theme: { button } }) =>
+  background: ${({ primary, outlined, secondary, theme: { colors } }) =>
     primary
-      ? button.primary
+      ? colors.primary
       : outlined
-      ? button.outlined
-      : secondary && button.secondary};
+      ? colors.outlined
+      : secondary && colors.outlined};
   font-weight: ${({
     theme: {
       fonts: { fontBold },
@@ -44,8 +44,8 @@ export const DefaultButton = styled.button<ButtonProps>`
     vertical-align: top;
   }
   &:hover {
-    background: ${(props) =>
-      props.primary ? "#FBAF85" : props.outlined ? "#000000" : "#ffffff"};
+    background: ${({ primary, outlined, theme: { colors } }) =>
+      primary ? colors.primaryHovered : outlined && colors.outlinedHovered};
     color: ${(props) =>
       props.primary
         ? "#ffffff"

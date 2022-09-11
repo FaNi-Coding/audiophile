@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import { useState } from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout/Layout";
 import Button from "../components/UI-Components/Buttons/Button";
