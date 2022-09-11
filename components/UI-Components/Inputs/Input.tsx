@@ -3,30 +3,33 @@ import React from "react";
 import { StyledTextInput, StyledRadioInput } from "./InputStyles";
 //props
 import { Props } from "../../../interfaces/InputInterfaces";
+import { miniSerializeError } from "@reduxjs/toolkit";
 
 export default function Input({ name, type, value }: Props) {
   return (
     <>
-      <form>
+      <form style={{ width: "min(300px, 100%)" }}>
         {type === "email" && (
-          <label htmlFor={name} style={{ fontWeight: "500", fontSize: "12px" }}>
+          <StyledTextInput htmlFor={name}>
             {name}
-            <StyledTextInput
+            <span className="error-message">Wrong format</span>
+            <input
+              className="text-input"
               type={type}
               id={name}
               placeholder={`insert your name`}
             />
-          </label>
+          </StyledTextInput>
         )}
       </form>
-      <div>
+      <form>
         {type === "radio" && (
           <StyledRadioInput htmlFor={value}>
             <input type={type} id={value} value={value} />
             {value}
           </StyledRadioInput>
         )}
-      </div>
+      </form>
     </>
   );
 }

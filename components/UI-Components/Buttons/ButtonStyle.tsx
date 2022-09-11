@@ -1,13 +1,21 @@
 import styled from "styled-components";
-import { ButtonPropsInterface } from "./ButtonInterface";
+import { ButtonProps } from "./ButtonInterface";
 
 const icon = `url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.32178 1L6.32178 6L1.32178 11' stroke='%23D87D4A' stroke-width='2'/%3E%3C/svg%3E%0A")`;
 
-export const DefaultButton = styled.button<ButtonPropsInterface>`
+export const DefaultButton = styled.button<ButtonProps>`
   position: relative;
-  background: ${(props) =>
-    props.primary ? "#D87D4A" : props.outlined ? "#ffffff" : "#ffffff"};
-  font-weight: ${(props) => (props.weight ? props.weight : "bold")};
+  background: ${({ primary, outlined, secondary, theme: { button } }) =>
+    primary
+      ? button.primary
+      : outlined
+      ? button.outlined
+      : secondary && button.secondary};
+  font-weight: ${({
+    theme: {
+      fonts: { fontBold },
+    },
+  }) => fontBold};
   color: ${(props) =>
     props.primary
       ? "#ffffff"

@@ -1,27 +1,38 @@
 import styled from "styled-components";
 import { InputProps } from "../../../interfaces/InputInterfaces";
 
-export const StyledTextInput = styled.input<InputProps>`
-  background-color: transparent;
-  outline: none;
-  min-width: 300px;
-  border: 1px solid ${(props) => props.primary && "#F1F1F1"};
-  border-radius: 8px;
-  padding: 12px 20px;
-  font-size: 14px;
-  display: block;
-  text-transform: capitalize;
-  margin-top: 5px;
-  cursor: text;
+export const StyledTextInput = styled.label`
+  font-weight: 500;
+  font-size: 12px;
   position: relative;
 
-  &:active,
-  :focus {
-    border: 2px solid #d87d4a;
+  .error-message {
+    position: absolute;
+    right: 0;
+    top: 1px;
   }
 
-  &:invalid {
-    border: 2px solid #cd2c2c;
+  .text-input {
+    background-color: transparent;
+    outline: none;
+    min-width: 300px;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    display: block;
+    text-transform: capitalize;
+    margin-top: 5px;
+    cursor: text;
+
+    &:active,
+    :focus {
+      border: 2px solid #d87d4a;
+    }
+
+    &:invalid {
+      border: 2px solid #cd2c2c;
+    }
   }
 `;
 
