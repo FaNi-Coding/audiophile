@@ -1,4 +1,9 @@
+import { createGlobalStyle } from "styled-components";
+
 export const theme = {
+  body: "#FAFAFA",
+  boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.1)",
+
   colors: {
     header: "#0E0E0E",
     body: "#FAFAFA",
@@ -20,3 +25,16 @@ export const theme = {
     fontNormal: "500",
   },
 };
+
+export const GlobalStyles = createGlobalStyle`
+
+body {
+  background-color: ${({ theme }: any) => theme.body};
+}
+
+section {
+  width: min(100%, 1220px);
+  padding: 0 165px;
+}
+
+`;
