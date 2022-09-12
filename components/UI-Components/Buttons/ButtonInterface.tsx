@@ -6,6 +6,7 @@ export interface ButtonPropsInterface {
   primary?: boolean;
   outlined?: boolean;
   secondary?: boolean;
+  url?: string;
 }
 
 export type ButtonProps = ButtonPropsInterface &

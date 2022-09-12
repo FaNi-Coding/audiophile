@@ -46,14 +46,15 @@ export const DefaultButton = styled.button<ButtonProps>`
   &:hover {
     background: ${({ primary, outlined, theme: { colors } }) =>
       primary ? colors.primaryHovered : outlined && colors.outlinedHovered};
-    color: ${(props) =>
-      props.primary
+    color: ${({ primary, outlined, secondary, theme: { colors } }) =>
+      primary
         ? "#ffffff"
-        : props.outlined
+        : outlined
         ? "#ffffff"
-        : props.secondary
-        ? "#d87d4a"
-        : "#000000"};
-    border: ${(props) => (props.outlined ? "1px solid black" : "none")};
+        : secondary
+        ? colors.primary
+        : colors.outlinedHovered};
+    border: ${({ outlined, theme: { colors } }) =>
+      outlined ? `1px solid ${colors.black}` : "none"};
   }
 `;

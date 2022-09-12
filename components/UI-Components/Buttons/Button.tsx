@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { DefaultButton } from "./ButtonStyle";
 import type { ButtonProps } from "./ButtonInterface";
+import Link from "next/link";
 
 /**
  *
@@ -11,7 +12,7 @@ import type { ButtonProps } from "./ButtonInterface";
 const Button: NextPage<ButtonProps> = ({ className, children, ...props }) => {
   return (
     <DefaultButton className={className} {...props}>
-      {children}
+      <Link href={props.url!}>{children}</Link>
     </DefaultButton>
   );
 };
