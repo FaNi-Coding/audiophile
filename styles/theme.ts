@@ -47,6 +47,8 @@ body {
 }
 
 header {
+  height: 9rem;
+  width: 100%;
   background-color: ${({ theme }: any) => theme.colors.header};
   color: ${({ theme }: any) => theme.colors.white};
 }
@@ -135,5 +137,20 @@ p{
 
 .copyright {
   font-size: 1.5rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  width: min(120rem, 100%);
+  margin: 0 auto;
+  padding: 0rem 1.6rem;
 }
 `;
