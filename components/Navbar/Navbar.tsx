@@ -7,7 +7,7 @@ type Props = {}
 const Navbar = (props: Props) => {
   return (
     <StyledNav className='flex'>
-      <nav className="container flex align-center justify-around">
+      <nav className="container flex align-center justify-between">
         <div className='menu'>
           <Image src="/assets/shared/tablet/icon-hamburger.svg" alt="hamburger" width={16}
           height={15}

@@ -6,8 +6,8 @@ export const StyledNav = styled.header`
     align-items: center;
   }
 
-  .justify-around {
-    justify-content: space-around
+  .justify-between {
+    justify-content: space-between
   }
 
   h-full {
