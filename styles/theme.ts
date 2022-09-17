@@ -32,8 +32,9 @@ export const theme = {
   },
 
   fonts: {
-    fontBold: "700",
-    fontNormal: "500",
+    bold: "700",
+    medium: "500",
+    regular: '400'
   },
 };
 
@@ -41,8 +42,8 @@ export const GlobalStyles = createGlobalStyle`
 
 body {
   background-color: ${({ theme }: any) => theme.colors.body};
-  font-size: 15px;
-  line-height: 25px;
+  position: relative;
+  text-transform: uppercase;
 }
 
 header {
@@ -56,68 +57,83 @@ footer {
 }
 
 section {
-  width: min(100%, 1220px);
-  padding: 0 165px;
+  width: min(100%, 1220rem);
+  padding: 0 165rem;
 }
 
 h1 {
-  font-size: 56px;
-  line-height: 58px;
-  letter-spacing: 2px;
-  text-transform: capitalize;
+  font-size: 5.6rem;
+  line-height: 5.8rem;
+  letter-spacing: .2rem;
+
+  ${({ theme }: any) => theme.fonts.bold};
 }
 
 h2 {
-  font-size: 40px;
-  line-height: 44px;
-  letter-spacing: 1.5px;
-  text-transform: capitalize;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  letter-spacing: .15rem;
+
+  ${({ theme }: any) => theme.fonts.bold}
 }
 
 h3 {
-  font-size: 32px;
-  line-height: 36px;
-  letter-spacing: 1.15px;
-  text-transform: capitalize;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  letter-spacing: .115rem;
+
+  ${({ theme }: any) => theme.fonts.bold};
 }
 
 h4 {
-  font-size: 28px;
-  line-height: 38px;
-  letter-spacing: 2px;
-  text-transform: capitalize;
+  font-size: 2.8rem;
+  line-height: 3.8rem;
+  letter-spacing: 2rem;
+
+  ${({ theme }: any) => theme.fonts.bold};
 }
 
 h5 {
-  font-size: 24px;
-  line-height: 33px;
-  letter-spacing: 1.7px;
-  text-transform: capitalize;
+  font-size: 2.4rem;
+  line-height: 3.3rem;
+  letter-spacing: 1.7rem;
+
+  ${({ theme }: any) => theme.fonts.regular};
 }
 
 h6 {
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 1.3px;
-  text-transform: capitalize;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: 1.3rem;
+
+  ${({ theme }: any) => theme.fonts.bold};
+}
+
+p{ 
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  ${({ theme }: any) => theme.fonts.medium};
+  
+  &::first-letter {
+    text-transform: capitalize;
+  }
 }
 
 .overline {
-  font-size: 14px;
-  line-height: 19px;
-  letter-spacing: 10px;
-  text-transform: capitalize;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: 1rem;
+
 }
 
 .subTitle {
-  margin-top: 32px;
-  font-size: 13px;
-  line-height: 25px;
-  letter-spacing: 1px;
-  text-transform: capitalize;
+  margin-top: 3.2rem;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  letter-spacing: .1rem;
 }
 
 .copyright {
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 `;
