@@ -5,8 +5,6 @@ import Input from "../components/UI-Components/Inputs/Input";
 
 
 const Home: NextPage = () => {
-
-
   return (
     <Layout title={""} description={""} keywords={""}>
       <Button href={{
