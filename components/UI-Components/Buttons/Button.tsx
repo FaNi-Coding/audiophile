@@ -16,8 +16,8 @@ import Link from "next/link";
 const Button = ({ className, children, ...props }:ButtonPropsInterface) => {
   
   return (
-    <DefaultButton className={className} {...props}>
-      <Link href={props.href!}><a>{children}</a></Link>
+    <DefaultButton  className={className} {...props}>
+     {children}
     </DefaultButton>
   );
 };

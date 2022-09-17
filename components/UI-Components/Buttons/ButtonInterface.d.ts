@@ -16,6 +16,8 @@ export interface ButtonPropsInterface {
   outlined?: boolean;
   secondary?: boolean;
   href?: Object;
+  onClick?: any;
+  
 }
 /**
  *
