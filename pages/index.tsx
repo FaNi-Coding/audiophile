@@ -4,6 +4,7 @@ import Button from "../components/UI-Components/Buttons/Button";
 import Input from "../components/UI-Components/Inputs/Input";
 import LinkUI from "../components/UI-Components/Link/Link";
 import { handleClick, HrefBoiler } from "../helpers/boilerplate/functions";
+
 const Home: NextPage = () => {
 
   return (
