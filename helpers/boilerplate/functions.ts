@@ -7,6 +7,7 @@ export const handleClick = (e:MouseEvent<HTMLButtonElement>) => {
      console.log(e)
 }
 
+// HREF Boilerplate
 export const HrefBoiler = {
      pathname:'/category/1',
      query: {  
