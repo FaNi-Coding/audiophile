@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { ButtonProps } from "./ButtonInterface.d";
+import styled from 'styled-components'
+import { ButtonProps } from './ButtonInterface.d'
 
-const icon = `url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.32178 1L6.32178 6L1.32178 11' stroke='%23D87D4A' stroke-width='2'/%3E%3C/svg%3E%0A")`;
+const icon = `url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.32178 1L6.32178 6L1.32178 11' stroke='%23D87D4A' stroke-width='2'/%3E%3C/svg%3E%0A")`
 
 export const DefaultButton = styled.button<ButtonProps>`
   position: relative;
@@ -13,19 +13,19 @@ export const DefaultButton = styled.button<ButtonProps>`
       : secondary && colors.outlined};
   font-weight: ${({
     theme: {
-      fonts: { fontBold },
+      fonts: { bold },
     },
-  }) => fontBold};
+  }) => bold};
   color: ${(props) =>
     props.primary
-      ? "#ffffff"
+      ? '#ffffff'
       : props.outlined
-      ? "#000000"
-      : props.secondary && "#00000080"};
-  border: ${(props) => (props.outlined ? "1px solid black" : "none")};
+      ? '#000000'
+      : props.secondary && '#00000080'};
+  border: ${(props) => (props.outlined ? '1px solid black' : 'none')};
   width: min(160px, 100%);
   height: 48px;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-style: normal;
   font-size: 13px;
   line-height: 18px;
@@ -48,13 +48,13 @@ export const DefaultButton = styled.button<ButtonProps>`
       primary ? colors.primaryHovered : outlined && colors.outlinedHovered};
     color: ${({ primary, outlined, secondary, theme: { colors } }) =>
       primary
-        ? "#ffffff"
+        ? '#ffffff'
         : outlined
-        ? "#ffffff"
+        ? '#ffffff'
         : secondary
         ? colors.primary
         : colors.outlinedHovered};
     border: ${({ outlined, theme: { colors } }) =>
-      outlined ? `1px solid ${colors.black}` : "none"};
+      outlined ? `1px solid ${colors.black}` : 'none'};
   }
-`;
+`

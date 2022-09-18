@@ -1,13 +1,15 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 type Props = {
   href?: string | Object
-  text?: string 
+  text?: string
 }
 
-const LinkUI = ({ href, text="linkText" }: Props) => {
+const LinkUI = ({ href, text = 'linkText' }: Props) => {
   return (
-    <Link href={href!}><a>{text}</a></Link> 
+    <Link href={href!}>
+      <a>{text}</a>
+    </Link>
   )
 }
 
