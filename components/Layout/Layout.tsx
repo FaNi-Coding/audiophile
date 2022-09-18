@@ -2,13 +2,9 @@ import * as React from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import Head from "next/head";
+import {LayoutProps} from "./Interface"
+import Main from "./Main";
 
-export interface LayoutProps {
-  children: React.ReactNode;
-  title: string | "Audiophile | texchnology";
-  description: string | "alot of technologies";
-  keywords: string | "tech, headphones, earphones, speakers";
-}
 
 export default function Layout({
   children,
@@ -24,7 +20,7 @@ export default function Layout({
         <meta name="description" content={keywords} />
       </Head>
       <Navbar />
-      {children}
+      <Main>{children}</Main>
       <Footer />
     </>
   );
