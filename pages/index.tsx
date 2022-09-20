@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Layout from "../components/Layout/Layout";
+import Banner from "../components/UI-Components/Banners/Banner";
 import Button from "../components/UI-Components/Buttons/Button";
 import Input from "../components/UI-Components/Inputs/Input";
 import LinkUI from "../components/UI-Components/Link/Link";
@@ -8,7 +9,7 @@ import { handleClick, HrefBoiler } from "../helpers/boilerplate/functions";
 
 const Home: NextPage = () => {
   return (
-    <Layout title={""} description={""} keywords={""}>
+    <Layout title={""} description={""} keywords={""} component={<Banner />}>
       <Button primary>
         <LinkUI href={HrefBoiler} text="See Product" />
       </Button>
