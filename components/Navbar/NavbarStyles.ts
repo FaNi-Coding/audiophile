@@ -25,10 +25,10 @@ export const StyledNav = styled.header`
     position: absolute;
     top: 9rem;
     left: 0;
-    height: 70vh;
+    min-height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: 10;
+    z-index: 100;
     cursor: pointer;
 
     ul {
@@ -40,7 +40,7 @@ export const StyledNav = styled.header`
       flex-wrap: wrap;
       background: white;
       color: black;
-      gap: 1.6rem;
+      gap: 8rem;
       border-radius: 0 0 0.8rem 0.8rem;
       padding-top: 2rem 0;
 
@@ -48,8 +48,11 @@ export const StyledNav = styled.header`
         margin-top: 9rem;
       }
 
+      li:nth-child(3) {
+        margin-bottom: 4rem;
+      }
+
       li {
-        margin-top: 6rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -60,11 +63,10 @@ export const StyledNav = styled.header`
         cursor: pointer;
         background: ${(props) => props.theme.colors.tertiary};
         border-radius: 0.8rem;
-        padding-bottom: 1rem;
 
         img {
           margin-top: -6rem;
-          width: 50%;
+          width: 40%;
         }
       }
     }

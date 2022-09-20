@@ -16,10 +16,10 @@ const Navbar = (props: Props) => {
     setOpen((prev) => (prev = !prev));
   };
 
-  /*   //prevent scroll
+  //prevent scroll
   useEffect(() => {
-    open ? (document.body.style.overflow = "hidden") : "";
-  }, [open]); */
+    document.body.style.overflow = open ? "hidden" : "";
+  }, [open]);
 
   return (
     <StyledNav>
