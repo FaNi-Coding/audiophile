@@ -1,73 +1,73 @@
-import { StyledNav } from './NavbarStyles'
-import { useMediaQuery } from '../../hooks/useMediaQuery'
-import Image from 'next/image'
-import LinkItems from './LinkItems'
+import { useEffect, useState } from "react";
+//styles
+import { StyledNav } from "./NavbarStyles";
+import Image from "next/image";
+//components
+import LinkItems from "./LinkItems";
+//functions
+import { navLinks } from "../../helpers/boilerplate/functions";
 
-type Props = {}
+type Props = {};
 
 const Navbar = (props: Props) => {
-  const navLinks = [
-    {
-      name: 'headphones',
-      href: 'headphones',
-      img: '/assets/shared/desktop/image-category-thumbnail-headphones.png',
-    },
-    {
-      name: 'speakers',
-      href: 'speakers',
-      img: '/assets/shared/desktop/image-category-thumbnail-speakers.png',
-    },
-    {
-      name: 'earphones',
-      href: 'earphones',
-      img: '/assets/shared/desktop/image-category-thumbnail-earphones.png',
-    },
-  ]
+  //menutoggler
+  const [open, setOpen] = useState(false);
+  const toggleMenu = () => {
+    setOpen((prev) => (prev = !prev));
+  };
+
+  /*   //prevent scroll
+  useEffect(() => {
+    open ? (document.body.style.overflow = "hidden") : "";
+  }, [open]); */
 
   return (
     <StyledNav>
-      <nav className='container nav-wrapper'>
-        <div className='menu'>
+      <nav className="container nav-wrapper">
+        <div className="menu">
           <Image
-            src='/assets/shared/tablet/icon-hamburger.svg'
-            alt='hamburger'
+            src="/assets/shared/tablet/icon-hamburger.svg"
+            alt="hamburger"
             width={16}
             height={15}
+            onClick={toggleMenu}
           />
         </div>
 
-        <div className='logo'>
+        <div className="logo">
           <Image
-            src='/assets/shared/desktop/logo.svg'
-            alt='logo'
+            src="/assets/shared/desktop/logo.svg"
+            alt="logo"
             width={143}
             height={25}
           />
         </div>
 
-        <div className='links'>
+        <div className="links">
           <ul>
             <LinkItems array={navLinks} />
           </ul>
         </div>
 
-        <div className='cart'>
+        <div className="cart">
           <Image
-            src='/assets/shared/desktop/icon-cart.svg'
-            alt='cart'
+            src="/assets/shared/desktop/icon-cart.svg"
+            alt="cart"
             width={23}
             height={20}
           />
         </div>
       </nav>
 
-      <div className='mobile-menu'>
-        <ul>
-          <LinkItems array={navLinks} menuItems />
-        </ul>
-      </div>
+      {open && (
+        <div className="mobile-menu">
+          <ul>
+            <LinkItems array={navLinks} menuItems />
+          </ul>
+        </div>
+      )}
     </StyledNav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

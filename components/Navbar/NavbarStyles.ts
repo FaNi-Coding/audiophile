@@ -1,9 +1,15 @@
-import styled from 'styled-components'
-import { device } from '../../styles/device'
+import styled from "styled-components";
+import { device } from "../../styles/device";
 
 export const StyledNav = styled.header`
   display: flex;
   position: relative;
+
+  .menu,
+  .cart,
+  .logo {
+    cursor: pointer;
+  }
 
   .nav-wrapper {
     display: flex;
@@ -19,10 +25,11 @@ export const StyledNav = styled.header`
     position: absolute;
     top: 9rem;
     left: 0;
-    height: 100vh;
+    height: 70vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 10;
+    cursor: pointer;
 
     ul {
       width: 100%;
@@ -35,7 +42,7 @@ export const StyledNav = styled.header`
       color: black;
       gap: 1.6rem;
       border-radius: 0 0 0.8rem 0.8rem;
-      padding: 2rem 0;
+      padding-top: 2rem 0;
 
       li:first-child {
         margin-top: 9rem;
@@ -88,4 +95,4 @@ export const StyledNav = styled.header`
       display: none;
     }
   }
-`
+`;

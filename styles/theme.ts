@@ -1,41 +1,41 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const theme = {
   breakpoints: {
-    mobileS: '320px',
-    mobileM: '375px',
-    mobileL: '425px',
-    tablet: '768px',
-    laptop: '1024px',
-    laptopL: '1440px',
-    desktop: '2560px',
+    mobileS: "320px",
+    mobileM: "375px",
+    mobileL: "425px",
+    tablet: "768px",
+    laptop: "1024px",
+    laptopL: "1440px",
+    desktop: "2560px",
   },
   colors: {
-    header: '#0E0E0E',
-    body: '#FAFAFA',
-    footer: '#101010',
+    header: "#0E0E0E",
+    body: "#FAFAFA",
+    footer: "#101010",
 
-    primary: '#D87D4A',
-    secondary: '#ffffff',
-    tertiary: '#F1F1F1',
-    outlined: 'transparent',
-    primaryHovered: '#FBAF85',
-    outlinedHovered: '#000000',
+    primary: "#D87D4A",
+    secondary: "#ffffff",
+    tertiary: "#F1F1F1",
+    outlined: "transparent",
+    primaryHovered: "#FBAF85",
+    outlinedHovered: "#000000",
 
-    error: '#CD2C2C',
+    error: "#CD2C2C",
 
-    black: '#000000',
-    white: '#ffffff',
+    black: "#000000",
+    white: "#ffffff",
 
-    boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)',
+    boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.1)",
   },
 
   fonts: {
-    bold: '700',
-    medium: '500',
-    regular: '400',
+    bold: "700",
+    medium: "500",
+    regular: "400",
   },
-}
+};
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -110,7 +110,7 @@ h6 {
   ${({ theme }: any) => theme.fonts.bold};
 }
 
-p{ 
+p, a{ 
   font-size: 1.5rem;
   line-height: 2.5rem;
   font-weight: ${({ theme }: any) => theme.fonts.medium};
@@ -152,4 +152,4 @@ p{
   margin: 0 auto;
   padding: 0rem 1.6rem;
 }
-`
+`;
