@@ -19,6 +19,10 @@ export const HrefBoiler = {
 
 export const navLinks = [
   {
+    name: "home",
+    href: "home",
+  },
+  {
     name: "headphones",
     href: "headphones",
     img: "/assets/shared/desktop/image-category-thumbnail-headphones.png",

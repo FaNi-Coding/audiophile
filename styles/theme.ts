@@ -42,11 +42,11 @@ export const GlobalStyles = createGlobalStyle`
 body {
   background-color: ${({ theme }: any) => theme.colors.body};
   position: relative;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 header {
-  height: 9rem;
+  height: 85rem;
   width: 100%;
   background-color: ${({ theme }: any) => theme.colors.header};
   color: ${({ theme }: any) => theme.colors.white};
@@ -59,7 +59,7 @@ footer {
 
 section {
   width: min(100%, 1220rem);
-  padding: 0 165rem;
+  padding: 0 1.65rem;
 }
 
 h1 {
@@ -114,10 +114,10 @@ p, a{
   font-size: 1.5rem;
   line-height: 2.5rem;
   font-weight: ${({ theme }: any) => theme.fonts.medium};
-  
-  &::first-letter {
-    text-transform: capitalize;
-  }
+}
+
+a{
+text-transform: uppercase;
 }
 
 .overline {

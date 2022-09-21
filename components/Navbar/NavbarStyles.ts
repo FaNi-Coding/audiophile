@@ -3,7 +3,13 @@ import { device } from "../../styles/device";
 
 export const StyledNav = styled.header`
   display: flex;
-  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("/assets/home/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right -30rem;
 
   .menu,
   .cart,
@@ -12,9 +18,15 @@ export const StyledNav = styled.header`
   }
 
   .nav-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3.6rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    max-width: 12orem;
+    border-bottom: 1px solid
+      ${({ theme: { colors } }) => colors.navBorderBottom};
 
     .links {
       display: none;
@@ -73,6 +85,8 @@ export const StyledNav = styled.header`
   }
 
   @media ${device.laptop} {
+    background-position: right;
+
     .nav-wrapper {
       .links {
         display: flex;
