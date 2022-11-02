@@ -7,6 +7,8 @@ import LinkUI from "../components/UI-Components/Link/Link";
 import ShopLinks from "../components/UI-Components/Sections/ShopLinks";
 import { handleClick, HrefBoiler } from "../helpers/boilerplate/functions";
 
+/* testing 123 */
+
 const Home: NextPage = () => {
   return (
     <Layout
@@ -33,7 +35,7 @@ const Home: NextPage = () => {
         SHOP
       </Button>
       <Input name="Name" type="email" />
-      <Input type="radio" value="e-Money" /> 
+      <Input type="radio" value="e-Money" />
       <ShopLinks />
     </Layout>
   );
