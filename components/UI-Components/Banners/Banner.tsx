@@ -1,23 +1,25 @@
-import React, { Fragment } from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
-import Image from "next/image";
-
-const StyledContainer = styled.div``;
+import { device } from "../../../styles/device";
 
 const StyledWrapper = styled.div`
-  display: grid;
-  place-items: center;
   height: 79rem;
   display: flex;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  @media ${device.laptop} {
+    justify-content: flex-start;
+  }
 `;
 
 const StyledSection = styled.section`
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: min(40rem, 100%);
-  z-index: 500;
+  text-align: center;
 
   h1 {
     color: ${({ theme: { colors } }) => colors.white};
@@ -31,11 +33,19 @@ const StyledSection = styled.section`
       text-transform: capitalize;
     }
   }
+
+  @media ${device.laptop} {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
 `;
 
-type Props = {};
+type Props = {
+  component: ReactNode;
+};
 
-const Banner = (props: Props) => {
+const Banner = ({ component }: Props) => {
   return (
     <div className="container">
       <StyledWrapper>
@@ -45,6 +55,7 @@ const Banner = (props: Props) => {
             experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
+          {component && component}
         </StyledSection>
       </StyledWrapper>
     </div>

@@ -6,10 +6,10 @@ export const StyledNav = styled.header`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: url("/assets/home/desktop/image-hero.jpg");
+  background-image: url("/assets/home/mobile/image-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center right -30rem;
+  background-position: center;
 
   .menu,
   .cart,
@@ -24,7 +24,6 @@ export const StyledNav = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 12orem;
     border-bottom: 1px solid
       ${({ theme: { colors } }) => colors.navBorderBottom};
 
@@ -84,8 +83,12 @@ export const StyledNav = styled.header`
     }
   }
 
+  @media ${device.tablet} {
+    background-image: url("/assets/home/tablet/image-header.jpg");
+  }
+
   @media ${device.laptop} {
-    background-position: right;
+    background-image: url("/assets/home/desktop/image-hero.jpg");
 
     .nav-wrapper {
       .links {

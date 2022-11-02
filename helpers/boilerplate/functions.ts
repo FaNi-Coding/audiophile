@@ -3,7 +3,6 @@ import { MouseEvent } from "react";
 // Click handler for the button
 export const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
   e.preventDefault();
-  console.log(e);
 };
 
 // HREF Boilerplate

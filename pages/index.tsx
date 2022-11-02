@@ -9,10 +9,23 @@ import { handleClick, HrefBoiler } from "../helpers/boilerplate/functions";
 
 const Home: NextPage = () => {
   return (
-    <Layout title={""} description={""} keywords={""} component={<Banner />}>
-      <Button primary>
+    <Layout
+      title={""}
+      description={""}
+      keywords={""}
+      component={
+        <Banner
+          component={
+            <Button primary>
+              <LinkUI href={HrefBoiler} text="See Product" />
+            </Button>
+          }
+        />
+      }
+    >
+      {/*  <Button primary>
         <LinkUI href={HrefBoiler} text="See Product" />
-      </Button>
+      </Button> */}
       {/*  <Button href="yoo" outlined>
         <LinkUI href="test" />
       </Button>

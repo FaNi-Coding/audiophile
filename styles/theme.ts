@@ -148,7 +148,9 @@ text-transform: uppercase;
 }
 
 .container {
-  width: min(120rem, 100%);
+  width: 100%;
+  max-width: 120rem;
+  /* width: min(120rem, 100%); */
   margin: 0 auto;
   padding: 0rem 1.6rem;
 }
