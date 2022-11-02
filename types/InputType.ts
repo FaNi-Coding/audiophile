@@ -1,4 +1,4 @@
-export interface Props {
+export type Props = {
   maxWidth?: string;
   margin?: string;
   primary?: string;

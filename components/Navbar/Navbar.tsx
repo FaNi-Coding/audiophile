@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 //styles
-import { StyledNav } from "./NavbarStyles";
+import { StyledNav as StyledHeader } from "./NavbarStyles";
 import Image from "next/image";
 //components
 import LinkItems from "./LinkItems";
@@ -25,7 +25,7 @@ const Navbar = ({ children }: Props) => {
 
   return (
     <>
-      <StyledNav>
+      <StyledHeader>
         <nav className="container nav-wrapper">
           <div className="menu">
             <Image
@@ -69,7 +69,7 @@ const Navbar = ({ children }: Props) => {
             </ul>
           </div>
         )}
-      </StyledNav>
+      </StyledHeader>
     </>
   );
 };
