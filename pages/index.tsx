@@ -7,7 +7,7 @@ import LinkUI from "../components/UI-Components/Link/Link";
 import ShopLinks from "../components/UI-Components/Sections/ShopLinks";
 import { handleClick, HrefBoiler } from "../helpers/boilerplate/functions";
 
-/* testing 1234 */
+/* Ok ska börja jobba sluta lalla :D tack fadil fantastiks feedback */
 
 const Home: NextPage = () => {
   return (
