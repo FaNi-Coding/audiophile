@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { DefaultButton } from "./ButtonStyle";
-import type { ButtonPropsInterface } from "./ButtonInterface";
+import type { ButtonPropsInterface } from "./Buttontypes";
 import Link from "next/link";
 
 /**

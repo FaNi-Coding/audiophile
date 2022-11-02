@@ -2,7 +2,7 @@ import React from "react";
 //styles
 import { StyledTextInput, StyledRadioInput } from "./InputStyles";
 //props
-import { Props } from "../../../interfaces/InputInterfaces";
+import { Props } from "../../../types/InputType";
 
 export default function Input({ name, type, value }: Props) {
   return (

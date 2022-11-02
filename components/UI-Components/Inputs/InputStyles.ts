@@ -1,17 +1,17 @@
 import styled from "styled-components";
-import { InputProps } from "../../../interfaces/InputInterfaces";
+import { InputProps } from "../../../types/InputType";
 
 export const StyledTextInput = styled.label`
   font-weight: 500;
   font-size: 12px;
   position: relative;
-  color: ${({ theme }) => theme.colors.error};
+  color: ${ ( { theme } ) => theme.colors.error };
 
   .error-message {
     position: absolute;
     right: 0;
     top: 1px;
-    color: ${({ theme }) => theme.colors.error};
+    color: ${ ( { theme } ) => theme.colors.error };
   }
 
   .text-input {
@@ -42,7 +42,7 @@ export const StyledRadioInput = styled.label<InputProps>`
   outline: none;
   margin: 10px 0px;
   max-width: 300px;
-  border: 1px solid ${(props) => props.primary && "#F1F1F1"};
+  border: 1px solid ${ ( props ) => props.primary && "#F1F1F1" };
   border-radius: 8px;
   padding: 12px 20px;
   font-size: 14px;
