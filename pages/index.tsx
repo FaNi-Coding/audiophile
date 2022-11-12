@@ -7,8 +7,6 @@ import LinkUI from "../components/UI-Components/Link/Link";
 import ShopLinks from "../components/UI-Components/Sections/ShopLinks";
 import { handleClick, HrefBoiler } from "../helpers/boilerplate/functions";
 
-/* testing 123 */
-
 const Home: NextPage = () => {
   return (
     <Layout
@@ -27,8 +25,9 @@ const Home: NextPage = () => {
     >
       {/*  <Button primary>
         <LinkUI href={HrefBoiler} text="See Product" />
-      </Button> */}
-      <Button href="yoo" outlined>
+      </Button> 
+       <Button href="yoo" outlined>
+
         <LinkUI href="test" />
       </Button>
       <Button onClick={handleClick} secondary>
@@ -36,7 +35,7 @@ const Home: NextPage = () => {
       </Button>
       <Input name="Name" type="email" />
       <Input type="radio" value="e-Money" />
-      <ShopLinks />
+      <ShopLinks /> */}
     </Layout>
   );
 };
