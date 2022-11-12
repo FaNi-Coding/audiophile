@@ -50,7 +50,7 @@ const Banner = ({ component }: Props) => {
     <div className="container">
       <StyledWrapper>
         <StyledSection>
-          <h1>XX99 Mark II Headphones</h1>
+          <h1>- XX99 Mark II Headphones -</h1>
           <p>
             experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
