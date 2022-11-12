@@ -4,7 +4,7 @@ type Props = {}
 
 const index = (props: Props) => {
   return (
-    <div>Cart index</div>
+    <div>index</div>
   )
 }
 
