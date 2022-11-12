@@ -27,8 +27,8 @@ const Home: NextPage = () => {
     >
       {/*  <Button primary>
         <LinkUI href={HrefBoiler} text="See Product" />
-      </Button> */}
-      <Button href="yoo" outlined>
+      </Button> 
+       <Button href="yoo" outlined>
         <LinkUI href="test" />
       </Button>
       <Button onClick={handleClick} secondary>
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
       </Button>
       <Input name="Name" type="email" />
       <Input type="radio" value="e-Money" />
-      <ShopLinks />
+      <ShopLinks /> */}
     </Layout>
   );
 };
