@@ -51,6 +51,7 @@ const Banner = ({ component }: Props) => {
       <StyledWrapper>
         <StyledSection>
           <h1>XX99 Mark II Headphones</h1>
+          <h3>This is from production!</h3>
           <p>
             experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
