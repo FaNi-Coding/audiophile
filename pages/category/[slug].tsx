@@ -8,7 +8,7 @@ const Category = (props: ICategoryProps) => {
      const [id, setId] = useState(router.query.id !== undefined ? router.query.id : 12);
   return (
     <div>
-      <h1>Hej {id&& router.query.id} </h1>
+      <h1>Hello, {id&& router.query.id}.</h1>
     </div>
   );
 }
